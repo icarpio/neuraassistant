@@ -3,12 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.png" type="image/png" />
 <title>Asistente Virtual</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
 <div class="container text-center mt-5">
-    <h1>Bienvenido a tu Asistente Virtual</h1>
+
+    <!-- Flex vertical siempre -->
+    <div class="d-flex flex-column align-items-center gap-3">
+        <!-- Logo -->
+        <img src="neura_red.png" alt="Logo" class="img-fluid" style="max-width: 300px; height: auto;">
+
+        <!-- Título -->
+        <h1 class="h4 fw-bold">
+            Selecciona asistente:
+        </h1>
+    </div>
+
 
     <form id="assistant-form">
         <select id="assistant-select" class="form-select mb-3">
