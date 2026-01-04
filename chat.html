@@ -137,10 +137,14 @@ function formatMessage(message) {
     const listRegex = /(?:<br>)*- (.*?)(?=<br>|$)/g;
     if (listRegex.test(html)) {
         html = html.replace(listRegex, "<li>$1</li>");
+        // Eliminar <br> que quedan justo antes de <li> para evitar saltos de linea dobles
+        html = html.replace(/(<br>)+(?=<li>)/g, "");
         html = "<ul>" + html + "</ul>";
     }
+
     return html;
 }
+
 
 // Agregar mensajes al chat
 function addMessage(message, type) {
